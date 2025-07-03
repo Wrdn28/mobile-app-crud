@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Gambar di kiri -->
+    <ImageView
+        android:id="@+id/imgNews"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Teks di tengah -->
+    <LinearLayout
+        android:id="@+id/textContainer"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintStart_toEndOf="@id/imgNews"
+        app:layout_constraintEnd_toStartOf="@id/deleteIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Judul"/>
+
+        <TextView
+            android:id="@+id/shortDescText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Singkat"/>
+
+        <TextView
+            android:id="@+id/dectText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Singkat"/>
+
+    </LinearLayout>
+
+    <!-- Delete icon di kanan -->
+    <ImageView
+        android:id="@+id/deleteIcon"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:tint="#F44336"
+        android:contentDescription="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="4dp"
+        tools:ignore="UseAppTint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
